@@ -7,27 +7,38 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Feliz Cumplemes, mi amor ❤️</h1>
+<div class="contenedor-con-corazones">
+    <div class="carta" id="carta" onclick="abrirCarta()">
+            <div class="frente">
+                <p>💌 Haz clic para abrir tu carta</p>
+            </div>
+            <div class="contenido">
+                <h2>Feliz cumplemes mi amor ❤️</h2>
+                <p>
+                    Hoy celebramos otro mes de amor, risas y momentos hermosos juntos.
+                    Cada instante contigo es un regalo que atesoro infinitamente.
+                    ¡Gracias por ser parte de mi vida!
+                </p>
+            </div>
     
-    <div class="carta">
-      <p>
-        Hoy celebramos un mes más de este amor tan bonito que compartimos. 
-        Gracias por cada sonrisa, cada abrazo y cada momento juntos. 
-        Eres lo mejor que me ha pasado y quiero seguir celebrando muchos meses más a tu lado. 
-        ¡Te amo con todo mi corazón!
-      </p>
-    </div>
-
-    <div class="slider">
-      <img id="foto" src="img/foto1.jpg" alt="Foto juntos">
-      <div class="botones">
-        <button onclick="anterior()">⏪</button>
-        <button onclick="siguiente()">⏩</button>
-      </div>
-    </div>
-  </div>
+        </div>
+        <div class="slider">
+            <img id="foto" alt="Foto juntos" src="img/foto1.jpeg">
+            <button class="nav-button left" onclick="anterior()">❮</button>
+            <button class="nav-button right" onclick="siguiente()">❯</button>
+        </div>
+        <div class="video-container">
+            <h2>Un momento especial 🎥</h2>
+            <video controls class="elegant-video">
+                <source src="video/video.mp4" type="video/mp4">
+            </video>
+        </div>
+</div>
 
   <script src="script.js"></script>
+
+  </div>
 </body>
+
+
 </html>

@@ -15,37 +15,135 @@ body {
   }
   
   .carta {
-    background-color: #ffe4ec;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 500px;
+    margin: 40px auto;
+    perspective: 1000px;
+    cursor: pointer;
   }
   
+  .carta .frente, .carta .contenido {
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 1s;
+    padding: 20px;
+    position: absolute;
+    background-color: #fff0f6;
+    text-align: center;
+  }
+  
+  .carta .frente {
+    z-index: 2;
+    transform: rotateY(0deg);
+    color: #ad1457;
+    font-size: 20px;
+  }
+  
+  .carta .contenido {
+    transform: rotateY(180deg);
+    color: #880e4f;
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  .carta.abierta .frente {
+    transform: rotateY(180deg);
+  }
+  
+  .carta.abierta .contenido {
+    transform: rotateY(0deg);
+  }
+  
+  .carta {
+    position: relative;
+    height: 250px;
+  }
+  
+  
   .slider {
-    margin-top: 30px;
+    position: relative;
+    width: 320px;
+    height: 400px;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
   }
   
   .slider img {
-    width: 300px;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 0 10px #ccc;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+    border-radius: 16px;
   }
   
-  .botones {
-    margin-top: 10px;
-  }
-  
-  .botones button {
-    font-size: 20px;
-    padding: 10px 20px;
-    margin: 0 5px;
-    background-color: #e91e63;
-    border: none;
+  .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 28px;
     color: white;
-    border-radius: 5px;
+    background: rgba(255, 105, 135, 0.6); /* rosa suave */
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
     cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   }
+  
+  .nav-button:hover {
+    background: rgba(255, 105, 135, 0.9);
+    transform: translateY(-50%) scale(1.1);
+  }
+  
+  .nav-button.left {
+    left: 10px;
+  }
+  
+  .nav-button.right {
+    right: 10px;
+  }
+  
+
+  .slider img {
+    transition: opacity 0.5s ease;
+  }
+    
+  
+  .contenido {
+    max-width: 600px;
+    background: #fff0f5;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+
+.contenido h2 {
+    font-size: 1.5em; /* Reduced font size */
+    color: #ff3366;
+    margin-bottom: 20px;
+}
+
+.contenido p {
+    font-size: 1em; /* Reduced font size */
+    line-height: 1.6;
+    color: #444;
+}
+  
+
+
+ 
   
